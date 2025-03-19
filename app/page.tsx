@@ -14,8 +14,39 @@ export default function Home() {
         <div>image</div>
       </header>
 
-      <article className="text-center font-bold text-4xl">
+      <article
+        className="text-center font-bold text-4xl m-5 p-2"
+        style={{
+          animation: "borderColorChange 10s infinite",
+          border: "4px solid",
+          borderImageSlice: 1,
+          borderImageSource: "linear-gradient(90deg, red, yellow, blue, red)",
+        }}
+      >
         <p>¡Cursos Disponibles!</p>
+      </article>
+      <style jsx>{`
+        @keyframes borderColorChange {
+          0% {
+            border-image-source: linear-gradient(90deg, red, yellow, blue, red);
+          }
+          50% {
+            border-image-source: linear-gradient(
+              90deg,
+              green,
+              blue,
+              red,
+              orange
+            );
+          }
+          100% {
+            border-image-source: linear-gradient(90deg, blue, red, green, blue);
+          }
+        }
+      `}</style>
+
+      <article className="text-center text-black font-bold text-1xl m-5">
+        <p>¡Todos los cursos son BÁSICOS!</p>
       </article>
 
       {/* Botones */}
@@ -58,7 +89,7 @@ export default function Home() {
             <p className="mt-2 mb-2">
               Algunos aspectos clave en alfabetización digital incluyen:
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-left">
               <li>
                 <b>Hardware:</b> uso del PC, periféricos y almacenamiento.
               </li>
@@ -96,7 +127,7 @@ export default function Home() {
             <p className="mt-2 mb-2">
               Algunos programas comunes en ofimática incluyen:
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-left">
               <li>
                 <b>Microsoft Office:</b> (Word, Excel, PowerPoint, Outlook).
               </li>
@@ -124,7 +155,45 @@ export default function Home() {
         )}
         {activeButton === "post3" && (
           <section>
-            <p>Contenido3</p>
+            <p>
+              Te sirve para comunicar ideas visualmente de manera efectiva y
+              atractiva. Es una herramienta clave en publicidad, branding, redes
+              sociales, diseño web y más.
+            </p>
+            <p className="mt-2 mb-2">
+              Algunas de sus principales utilidades son:
+            </p>
+            <ul className="list-disc list-inside text-left">
+              <li>
+                <b>Identidad visual:</b> Creación de logotipos, tipografías y
+                colores para marcas.
+              </li>
+              <li>
+                <b>Publicidad y marketing:</b> Diseño de carteles, banners,
+                flyers y contenido para redes sociales.
+              </li>
+              <li>
+                <b>Diseño web y UX/UI:</b> Creación de interfaces atractivas y
+                funcionales para sitios web y aplicaciones.
+              </li>
+              <li>
+                <b>Edición y maquetación:</b> Diseño de revistas, libros,
+                infografías y presentaciones profesionales.
+              </li>
+            </ul>
+            <p className="mt-2">
+              El diseño gráfico es esencial para captar la atención del público
+              y mejorar la experiencia visual en cualquier medio digital o
+              impreso. 🚀
+            </p>
+            <div className="mt-4 flex justify-center">
+              <Image
+                src="/DiseñoGrafico.png"
+                alt="Diseño Gráfico"
+                width={500}
+                height={300}
+              />
+            </div>
           </section>
         )}
       </article>
