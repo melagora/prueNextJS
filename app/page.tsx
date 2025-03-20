@@ -197,8 +197,27 @@ export default function Home() {
           </section>
         )}
       </article>
+      <article>
+        <div className="text-center p-2 bg-white text-black font-bold text-4xl m-2">
+          <p>¿No encuentras el curso que necesitas?</p>
+        </div>
+        <div className="text-center text-black font-bold text-1xl m-2">
+          <p className="bg-orange-500 font-bold p-2">🚫 ¡NO TE PREOCUPES! 🚫</p>
+          <p className="pt-3 pb-3 border-5 border-orange-500">
+            Pregunta por cursos especializados en algún área en especifico desde
+            enseñarte a crear cuentas de redes sociales, descargar musica o
+            videos, editar videos sencillos o hasta crear páginas web desde
+            cero.
+          </p>
+          <p className="bg-orange-500 font-bold text-white p-2">
+            🚀 El límite es tu imaginación 🚀
+          </p>
+        </div>
+      </article>
 
-      <footer className="mt-4 text-center">Pie de página.</footer>
+      <footer className="mt-2 text-center">
+        <p>Pie de página.</p>
+      </footer>
     </div>
   );
 }
